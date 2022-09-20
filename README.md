@@ -1,13 +1,19 @@
-# Sample Hardhat Project
+# Lottery SC wiht hardhat
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
 
-Try running some of the following tasks:
+Run the SC Test with:
 
 ```shell
-npx hardhat help
 npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.ts
 ```
+
+#### Public methods:
+```enter```: register sender account to participate
+```chooseWinner```: choose a winner (only callable by SC owner address only)
+
+#### Private methods:
+```checkIfAddressIsInLottery```: check if user is already registered
+```random```: get a random position in the array
+
+#### Modifiers:
+```onlyUnregistered```: use of method to check if user is already registered
